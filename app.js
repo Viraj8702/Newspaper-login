@@ -39,11 +39,11 @@ app.post("/",function(req,res){
 
   const jsonData=JSON.stringify(data);
 
-  const url="https://us18.api.mailchimp.com/3.0/lists/633963f952/";
+  const url="https://.api.mailchimp.com/3.0/lists/";
 
   const options = {
     method:"POST",
-    auth:"Viraj:09631fda4cdaf3dce985ea49089d57e4-us18"
+    auth:""
   }
 
   const request = https.request(url,options,function(response){
@@ -72,8 +72,4 @@ app.post("/failure",function(req,res){
 app.listen(process.env.PORT || port ,function(){
   console.log("Server is running on port "+port);
 });
-//api key
-// 09631fda4cdaf3dce985ea49089d57e4-us18 (https://us18.admin.mailchimp.com/account/api/)
 
-//list id
-// 633963f952 (https://us18.admin.mailchimp.com/lists/settings/defaults?id=299150)
